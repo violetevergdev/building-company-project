@@ -1,3 +1,5 @@
+import { services } from "../../data/services.ts";
+
 const Services = () => {
   return (
     <section className="services">
@@ -6,42 +8,12 @@ const Services = () => {
 
         <div className="services_cards">
           <ul className="services_cards-list">
-            <li className="services_list-item">
-              <img src="./img/services/building.svg" alt="building icon" />
-              <h3 className="services_item-title">
-                СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
-              </h3>
-            </li>
-            <li className="services_list-item">
-              <img src="./img/services/building.svg" alt="building icon" />
-              <h3 className="services_item-title">
-                СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
-              </h3>
-            </li>
-            <li className="services_list-item">
-              <img src="./img/services/building.svg" alt="building icon" />
-              <h3 className="services_item-title">
-                СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
-              </h3>
-            </li>
-            <li className="services_list-item">
-              <img src="./img/services/building.svg" alt="building icon" />
-              <h3 className="services_item-title">
-                СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
-              </h3>
-            </li>
-            <li className="services_list-item">
-              <img src="./img/services/building.svg" alt="building icon" />
-              <h3 className="services_item-title">
-                СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
-              </h3>
-            </li>
-            <li className="services_list-item">
-              <img src="./img/services/building.svg" alt="building icon" />
-              <h3 className="services_item-title">
-                СТРОИТЕЛЬСТВО ОФИСНЫХ ЗДАНИЙ
-              </h3>
-            </li>
+            {services?.map((item) => (
+              <li className="services_list-item" key={item.id}>
+                <img src={item.img} alt={item.alt} />
+                <h3 className="services_item-title">{item.title}</h3>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

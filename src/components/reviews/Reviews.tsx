@@ -1,3 +1,5 @@
+import { reviews } from "../../data/reviews.ts";
+
 const Reviews = () => {
   return (
     <section className="reviews">
@@ -6,54 +8,17 @@ const Reviews = () => {
 
         <div className="reviews_cards">
           <ul className="reviews_list">
-            <li className="reviews_list-item">
-              <div className="reviews_item-block">
-                <p className="reviews_item-description">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века. В то время некий
-                  безымянный печатник создал большую коллекцию размеров и форм
-                  шрифтов.
-                </p>
-              </div>
+            {reviews?.map((item) => (
+              <li className="reviews_list-item" key={item.id}>
+                <div className="reviews_item-block">
+                  <p className="reviews_item-description">{item.description}</p>
+                </div>
 
-              <h3 className="reviews_item-title">
-                Иванов Иван,
-                <span className="accent"> ООО “Газпром-Арена”</span>
-              </h3>
-            </li>
-            <li className="reviews_list-item">
-              <div className="reviews_item-block">
-                <p className="reviews_item-description">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века. В то время некий
-                  безымянный печатник создал большую коллекцию размеров и форм
-                  шрифтов.
-                </p>
-              </div>
-
-              <h3 className="reviews_item-title">
-                Иванов Иван,
-                <span className="accent"> ООО “Газпром-Арена”</span>
-              </h3>
-            </li>
-            <li className="reviews_list-item">
-              <div className="reviews_item-block">
-                <p className="reviews_item-description">
-                  Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                  вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                  текстов на латинице с начала XVI века. В то время некий
-                  безымянный печатник создал большую коллекцию размеров и форм
-                  шрифтов.
-                </p>
-              </div>
-
-              <h3 className="reviews_item-title">
-                Иванов Иван,
-                <span className="accent"> ООО “Газпром-Арена”</span>
-              </h3>
-            </li>
+                <h3 className="reviews_item-title">
+                  {item.author},<span className="accent"> {item.company}</span>
+                </h3>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

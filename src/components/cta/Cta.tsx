@@ -1,13 +1,11 @@
-const Cta = () => {
+const Cta = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
     <section className="cta">
       <div className="container">
         <div className="cta_wrapper">
           <div className="cta_text">
-            <h2 className="cta-title">САМЫЕ УМНЫЕ ПРОЕКТЫ</h2>
-            <p className="cta-subtitle">
-              РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!
-            </p>
+            <h2 className="cta-title">{title}</h2>
+            <p className="cta-subtitle">{subtitle}</p>
           </div>
 
           <div className="cta_action">

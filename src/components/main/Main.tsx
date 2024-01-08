@@ -1,3 +1,5 @@
+import { projects } from "../../data/projects.ts";
+
 const Main = () => {
   return (
     <section className="projects">
@@ -6,33 +8,13 @@ const Main = () => {
 
         <div className="projects_cards">
           <ul className="cards_list">
-            <li className="project_item">
-              <img src="./img/main/1.jpg" alt="" className="project-image" />
-              <h3 className="project-title">Газпром Арена</h3>
-              <p className="project-description">
-                Мы сделали самую красивую арену в Европе. Это открытие стало для
-                нас прорывной точкой для разивтия на следующие десятилетия. Мы
-                очень рады данному еву.
-              </p>
-            </li>
-            <li className="project_item">
-              <img src="./img/main/1.jpg" alt="" className="project-image" />
-              <h3 className="project-title">Газпром Арена</h3>
-              <p className="project-description">
-                Мы сделали самую красивую арену в Европе. Это открытие стало для
-                нас прорывной точкой для разивтия на следующие десятилетия. Мы
-                очень рады данному еву.
-              </p>
-            </li>
-            <li className="project_item">
-              <img src="./img/main/1.jpg" alt="" className="project-image" />
-              <h3 className="project-title">Газпром Арена</h3>
-              <p className="project-description">
-                Мы сделали самую красивую арену в Европе. Это открытие стало для
-                нас прорывной точкой для разивтия на следующие десятилетия. Мы
-                очень рады данному еву.
-              </p>
-            </li>
+            {projects?.map((item) => (
+              <li className="project_item" key={item.id}>
+                <img src={item.img} alt="" className="project-image" />
+                <h3 className="project-title">{item.title}</h3>
+                <p className="project-description">{item.description}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

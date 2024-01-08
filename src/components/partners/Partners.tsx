@@ -1,3 +1,5 @@
+import { partners } from "../../data/partners.ts";
+
 const Partners = () => {
   return (
     <section className="partners">
@@ -7,41 +9,11 @@ const Partners = () => {
 
           <div className="partners_cards">
             <ul className="partners_list">
-              <li className="partners_list-item">
-                <img
-                  src="/img/partners/berksho.svg"
-                  alt="berksho"
-                  className="partners-img"
-                />
-              </li>
-              <li className="partners_list-item">
-                <img
-                  src="/img/partners/berksho.svg"
-                  alt="berksho"
-                  className="partners-img"
-                />
-              </li>
-              <li className="partners_list-item">
-                <img
-                  src="/img/partners/berksho.svg"
-                  alt="berksho"
-                  className="partners-img"
-                />
-              </li>
-              <li className="partners_list-item">
-                <img
-                  src="/img/partners/berksho.svg"
-                  alt="berksho"
-                  className="partners-img"
-                />
-              </li>
-              <li className="partners_list-item">
-                <img
-                  src="/img/partners/berksho.svg"
-                  alt="berksho"
-                  className="partners-img"
-                />
-              </li>
+              {partners?.map((item) => (
+                <li className="partners_list-item" key={item.id}>
+                  <img src={item.img} alt={item.alt} className="partners-img" />
+                </li>
+              ))}
             </ul>
           </div>
         </div>

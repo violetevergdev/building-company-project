@@ -51,7 +51,10 @@
 }
 
 // Header Footer
-
+.header_footer-substrate {
+  display: flex;
+  justify-content: center;
+}
 .header_footer-cards {
 
   padding: 57px 130px;
@@ -64,11 +67,13 @@
 .header-list {
   display: flex;
   gap: 30px;
+
 }
 
 .list_item {
   text-align: center;
   padding: 0 59px;
+
 
   font-weight: 500;
   font-size: 2.25rem;

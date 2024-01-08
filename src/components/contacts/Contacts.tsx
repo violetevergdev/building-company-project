@@ -1,3 +1,5 @@
+import { contacts } from "../../data/contacts.ts";
+
 const Contacts = () => {
   return (
     <section className="contacts">
@@ -6,54 +8,22 @@ const Contacts = () => {
 
         <div className="contacts_cards">
           <ul className="contacts_list">
-            <li className="contacts_list-item">
-              <img
-                src="/img/contacts/map.svg"
-                alt="map icon"
-                className="contacts_item-icon"
-              />
+            {contacts?.map((item) => (
+              <li className="contacts_list-item" key={item.id}>
+                <img
+                  src={item.icon}
+                  alt="map icon"
+                  className="contacts_item-icon"
+                />
 
-              <h3 className="contacts_item-title">АДРЕС:</h3>
-              <p className="contacts_item-subtitle">
-                НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142
-              </p>
-            </li>
-            <li className="contacts_list-item">
-              <img
-                src="./img/contacts/phone.svg"
-                alt="phone icon"
-                className="contacts_item-icon"
-              />
+                <h3 className="contacts_item-title">{item.title}</h3>
 
-              <h3 className="contacts_item-title">АДРЕС:</h3>
-              <p className="contacts_item-subtitle">
-                НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142
-              </p>
-            </li>
-            <li className="contacts_list-item">
-              <img
-                src="./img/contacts/watch.svg"
-                alt="watch icon"
-                className="contacts_item-icon"
-              />
-
-              <h3 className="contacts_item-title">АДРЕС:</h3>
-              <p className="contacts_item-subtitle">
-                НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142
-              </p>
-            </li>
-            <li className="contacts_list-item">
-              <img
-                src="./img/contacts/mail.svg"
-                alt="mail icon"
-                className="contacts_item-icon mail"
-              />
-
-              <h3 className="contacts_item-title">АДРЕС:</h3>
-              <p className="contacts_item-subtitle">
-                НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142
-              </p>
-            </li>
+                <p
+                  className="contacts_item-subtitle"
+                  dangerouslySetInnerHTML={{ __html: item.description }}
+                ></p>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
