@@ -1,0 +1,85 @@
+// Header
+.header {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  min-height: 890px;
+
+}
+
+// Header Top
+.header_top {
+    min-height: 740px;
+    background: linear-gradient(0deg, rgba(64, 65, 73, 0.90) 0%, rgba(64, 65, 73, 0.90) 100%), url('/public/img/header/header-bg.jpg');
+}
+
+.header_top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_nav-btn {
+    display: flex;
+    color: $white;
+    background: $accent;
+
+}
+
+.logo {
+  padding-top: 20px;
+}
+
+// Header Main
+.header_main {
+  margin-top: 120px;
+  color: $white;
+}
+
+.header_title {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1.28px;
+}
+
+.header_subtitle {
+  font-size: 1.125rem;
+  text-align: center;
+  padding-top: 18px;
+}
+
+// Header Footer
+
+.header_footer-cards {
+
+  padding: 57px 130px;
+  background-color: $substrate;
+
+  position: absolute;
+  bottom: 7%;
+}
+
+.header-list {
+  display: flex;
+  gap: 30px;
+}
+
+.list_item {
+  text-align: center;
+  padding: 0 59px;
+
+  font-weight: 500;
+  font-size: 2.25rem;
+
+  &-accent {
+    font-size: 4.5rem;
+    color: $accent;
+  }
+  &-secondary {
+    font-size: 1.125rem;
+    text-transform: none;
+    color: $gray;
+  }
+}

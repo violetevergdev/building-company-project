@@ -1,0 +1,25 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@400;500;700&display=swap');
+
+
+
+// BASE
+@import "reset";
+@import "vars";
+@import "base";
+
+
+
+
+// СТИЛИ КОМПОНЕНТОВ
+@import '../components/header/header';
+@import '../components/main/mainStyle';
+@import '../components/cta/cta';
+@import '../components/services/services';
+@import '../components/portfolio/portfolio';
+@import '../components/questions/questions';
+@import '../components/accordion/accordion';
+@import '../components/partners/partners';
+@import '../components/reviews/reviews';
+@import '../components/contacts/contacts';
+@import '../components/footer/footer';

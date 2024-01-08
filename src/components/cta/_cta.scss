@@ -1,0 +1,40 @@
+.cta {
+  background-color: $accent;
+}
+
+.cta_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta_text {
+  color: $white;
+  font-weight: 700;
+  padding: 45px 0;
+}
+
+.cta-title {
+  font-size: 3rem;
+  letter-spacing: 0.96px;
+}
+
+.cta-subtitle {
+  font-size: 1.5rem;
+  letter-spacing: 0.48px;
+}
+
+.cta_action {
+}
+
+.btn {
+  background-color: $white;
+  padding: 14px 30px;
+
+}
+
+.cta-icon {
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+}

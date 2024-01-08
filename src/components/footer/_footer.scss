@@ -1,0 +1,15 @@
+.footer {
+  background-color: $dark;
+}
+
+
+.wrapper {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_text {
+  color: $white;
+  font-family: $second-font;
+}

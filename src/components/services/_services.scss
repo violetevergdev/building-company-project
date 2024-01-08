@@ -1,0 +1,33 @@
+.services {
+  padding: 150px 0;
+}
+
+.services_cards {
+  padding-top: 66px;
+}
+
+.services_cards-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.services_list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 59px 86px;
+  background-color: $substrate;
+}
+
+.services_item-title {
+  color: #000;
+
+  padding-top: 30px;
+
+  text-align: center;
+  font-size: 1.31rem;
+  font-weight: 500;
+  letter-spacing: 0.42px;
+}

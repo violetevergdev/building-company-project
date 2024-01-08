@@ -1,0 +1,37 @@
+.contacts {
+  padding: 100px 0 150px;
+}
+
+.contacts_cards {
+  padding-top: 60px;
+}
+
+.contacts_list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.contacts_list-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.contacts_item-icon.mail {
+  padding-bottom: 10px;
+}
+
+.contacts_item-title {
+  color: $gray;
+  padding-top:20px;
+}
+
+.contacts_item-subtitle {
+  padding-top:25px;
+  text-align: center;
+}

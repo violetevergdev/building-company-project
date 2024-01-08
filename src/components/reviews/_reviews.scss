@@ -1,0 +1,43 @@
+.reviews {
+  padding: 150px 0;
+}
+
+.reviews_cards {
+  padding-top: 64px;
+}
+
+.reviews_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.reviews_list-item {
+}
+
+.reviews_item-block {
+  background-color: $substrate;
+  padding: 38px 30px;
+}
+
+.reviews_item-description {
+  color: $gray;
+  font-family: $second-font;
+  font-size: 0.875rem;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: url("/public/img/quote.svg");
+    padding-bottom: 20px;
+  }
+}
+
+.reviews_item-title {
+  padding-top: 30px;
+  font-size: 1.312rem;
+  font-weight: 500;
+  letter-spacing: 0.42px;
+}
+

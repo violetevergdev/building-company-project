@@ -1,0 +1,51 @@
+.projects {
+  padding-top: 100px ;
+  padding-bottom: 130px;
+
+}
+.projects-title {
+
+  color: $gray;
+}
+.projects_cards {
+  margin-top: 60px;
+
+}
+
+.cards_list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.project_item {
+
+}
+
+.project-image {
+  padding-bottom: 45px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
+  position: relative;
+  padding-top: 20px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 55px;
+    height: 6px;
+    background-color: $accent;
+  }
+}
+
+.project-description {
+  color: $gray;
+  font-family: $second-font;
+}
